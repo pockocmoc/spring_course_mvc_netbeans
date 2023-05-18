@@ -1,13 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.zaurtregulov.spring.mvc;
 
-/**
- *
- * @author marat
- */
+
 public class Employee {
 
     private String name;
@@ -52,11 +45,8 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee{" + "name=" + name + ""
-                + ", surename=" + surename + ""
-                + ", salary=" + salary + ""
-                + ", department=" + department + '}';
+        return "Employee{" + "name=" + name + ", surename=" + surename + ", "
+                + "salary=" + salary + ", department=" + department + '}';
     }
-    
 
 }
