@@ -1,14 +1,31 @@
 package com.zaurtregulov.spring.mvc;
 
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class Employee {
 
     private String name;
-    private String surename;
+    private String surname;
     private int salary;
     private String department;
+    private String carBrand;
+    private Map<String, String> departments;
+    private String[] languages;
+    private Map<String, String> languageList;
 
     public Employee() {
+        departments = new HashMap<>();
+        departments.put("IT", "Information Technology");
+        departments.put("HR", "Human Resources");
+        departments.put("Sales", "Sales");
+
+        languageList = new LinkedHashMap<>();
+        languageList.put("English", "EN");
+        languageList.put("Deutch", "DE");
+        languageList.put("French", "FR");
+
     }
 
     public String getName() {
@@ -19,12 +36,12 @@ public class Employee {
         this.name = name;
     }
 
-    public String getSurename() {
-        return surename;
+    public String getSurname() {
+        return surname;
     }
 
-    public void setSurename(String surename) {
-        this.surename = surename;
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
     public int getSalary() {
@@ -43,10 +60,41 @@ public class Employee {
         this.department = department;
     }
 
+    public Map<String, String> getDepartments() {
+        return departments;
+    }
+
+    public void setDepartments(Map<String, String> departments) {
+        this.departments = departments;
+    }
+
+    public String getCarBrand() {
+        return carBrand;
+    }
+
+    public void setCarBrand(String carBrand) {
+        this.carBrand = carBrand;
+    }
+
+    public String[] getLanguages() {
+        return languages;
+    }
+
+    public void setLanguages(String[] languages) {
+        this.languages = languages;
+    }
+
+    public Map<String, String> getLanguageList() {
+        return languageList;
+    }
+
+    public void setLanguageList(Map<String, String> languageList) {
+        this.languageList = languageList;
+    }
+
     @Override
     public String toString() {
-        return "Employee{" + "name=" + name + ", surename=" + surename + ", "
-                + "salary=" + salary + ", department=" + department + '}';
+        return "Employee{" + "name=" + name + ", surname=" + surname + ", salary=" + salary + ", department=" + department + '}';
     }
 
 }
